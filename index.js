@@ -16,6 +16,9 @@ app.use(cookieParser())
 
 app.use("/api",router)
 
+// Handle preflight requests
+app.options('*', cors());
+
 const PORT = 8080 || process.env.PORT
 
 
